@@ -11,11 +11,7 @@ var b = 0
 var c = 0
 var d = 0
 
-var reg2 = /[0-9]/
-var reg3 = /[a-z]/
-var reg4 = /[A-Z]/
-var reg5 = /[a-zA-Z]/
-var reg6 = /[a-zA-Z_0-9]/
+
 
 $("#phone").focus(function(){
 	if($(this).val()=="请输入手机号"){
@@ -155,8 +151,14 @@ $("#login").click(function(){
 							"username":a1,
 							"password":a2
 						}
-						$.post(url,data,function(str){
-							console.log(str)
+						$.post(url,data,function(obj){
+							console.log(obj)
+							if(obj.code == 2001){
+								alert("用户名已存在")
+								return
+							}else{
+								alert("注册成功")
+							}
 						})
 					}else{
 						alert("请勾选同意")
@@ -166,15 +168,19 @@ $("#login").click(function(){
 				
 				}else{
 					alert("密码不一致")
+					return ;
 				}
 				
 			}else{
 				alert("密码格式不对")
+				return ;
 			}
 		}else{
 			alert("请输入正确的验证码")
+			return ;
 		}
 	}else{
 		alert("请输入正确的手机号")
+		return ;
 	}
 })
