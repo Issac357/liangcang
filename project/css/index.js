@@ -78,7 +78,7 @@ $.get(url,data,function(obj){
 		h+='</div><p>'+arr[j].goods_name+'</p></a></li>'
 		
 	}
-	//console.log(h)
+	console.log(h)
 	$(".thing ul").html(h)
 	
 })
