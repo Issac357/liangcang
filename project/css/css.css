@@ -1,0 +1,407 @@
+*{
+	padding: 0;
+	margin:0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	/*color: white;*/
+}
+img{
+	border: none;
+}
+body{
+	overflow-x: hidden;
+}
+/*头部*/
+
+.header{
+	height: 56px;
+	width: 100%;
+	background: #25292e;
+}
+.logo{
+	height: 56px;
+	width: 1000px;
+	margin: 0 auto;
+	font-size: 12px;
+}
+.img{
+	float: left;
+}
+.logo ul{
+	float: right;
+}
+.logo>ul>li{
+	float: left;
+	text-align: center;
+	width: 70px;
+	color: white;
+	line-height: 56px;
+	position:relative;
+}
+.logo ul li>a{
+	color: white;
+	opacity: 0.5;
+}
+.tianjia:hover a{
+	opacity: 1;
+}
+.a{
+	color: white;
+	float: right;
+	line-height: 56px;
+	padding-right: 5px;
+}
+.shop div{
+	height: 120px;
+	width: 320px;
+	display: none;
+	background: #292f34;
+	position: absolute;
+	bottom: -120px;
+	left: -115px;
+	z-index: 2;
+}
+.shop div a{
+	display: block;
+	width: 320px;
+	height: 65px;
+	background: #96c8e0;
+	opacity: 1;
+	color: white;
+}
+.shop:hover a{
+	
+	opacity: 1;
+}
+.shop:hover div{
+	display: block;
+}
+.msage ul{
+	position: absolute;
+	z-index: 2;
+	top: 56px;
+	left: -55px;
+	display: none;
+}
+.msage ul li{
+	width: 150px;
+	height: 43px;
+	line-height: 43px;
+	border-bottom: 1px rgba(255,255,255,0.5) solid;
+	padding: 0 20px; 
+	background: #292F34;text-align: left;
+	
+}
+.msage ul li a{
+	opacity: 1;
+}
+.msage ul li a span{
+	float: right;
+}
+.msage:hover a{
+	opacity: 1;
+}
+.msage:hover ul{
+	display: block;
+}
+
+
+/*导航*/
+
+.sbv{
+	height: 45px;
+	width: 1000px;
+	border-bottom: 3px rgba(0,0,0,0.3) solid;
+	margin: 0 auto;
+}
+.sbv ul li{
+	float: left;
+	line-height: 45px;
+	width: 130px;
+	text-align: center;
+	position: relative;
+}
+.sbv ul li a{
+	color: black;
+}
+.sbv>ul>li:hover{
+	border-bottom: 3px black solid;
+}
+.sbv ul .shouye{
+	text-align: left;
+	width: 80px;
+}
+.shangdian-1{
+	width: 1000px;
+	height: 500px;
+	position: absolute;
+	top: 48px;
+	left: -80px;
+	display: none;
+	background: white;
+	z-index: 2;
+}
+.shangdian-1 ul li a img{
+	height: 40px;
+	width: 40px;
+	
+}
+.shangdian-1 ul>li{
+	width: 40px;
+	height: 60px;
+	margin: 20px 30px;
+}
+.shangdian-1>ul>li>a>p{
+	margin-top: -20px;
+	height: 20px;
+}
+.shangdian-1 ul{
+	width: 650px;
+	height: 300px;
+	float: left;
+}
+.xinshixian{
+	/*background: #ccc;*/
+	width: 230px;
+	height: 230px;
+	float: right;
+	margin: 50px 50px;
+}
+.xinshixian a img{
+	width: 230px;
+	height: 230px;
+}
+.shangdian:hover .shangdian-1{
+	display: block;
+}
+
+
+/*轮播*/
+.lunbo{
+	width: 1000px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.lunbo>ul{
+	width: 10000px;
+	position: absolute;
+}
+.lunbo>ul>li{
+	width: 1000px;
+	height: 475px;
+	float: left;
+	position: absolute;
+}
+.lunbo>span{
+	cursor: pointer;
+	position: absolute;
+	z-index: 2;
+	width: 40px;
+	height: 40px;
+	background: #3c3c3c;
+	border-radius: 50%;
+	color: #F2F2F2;
+	top: 50%;
+	margin-top: -20px;
+	display: none;
+	transition: all 1s; 
+}
+.lunbo .pre{
+	left: 10px;
+}
+.lunbo .next{
+	right: 10px;
+}
+.lunbo:hover span{
+	display: block;
+}
+.lunbo>span:hover{
+	opacity: 0.4;
+}
+.num{
+	height: 10px;
+	margin: 0 auto;
+	width: 450px;
+	position: absolute;
+	bottom:10px ;
+	left: 50%;
+	margin-left: -225px;
+}
+.num span{
+	float: left;
+	width: 40px;
+	height: 8px;
+	background: red;
+	margin: 5px 5px 0;
+	cursor: pointer;
+	background: #f1f1f1;
+}
+.num span.num-s{
+	background: #333333;
+}
+
+/*thing*/
+
+
+.thing{
+	height: 1200px;
+	width: 1000px;
+	margin: 10px auto;
+	
+}
+
+.thing h3{
+	text-align: center;
+	font-size: 12px;
+	border-bottom: 1px #333333 solid;
+	margin-bottom: 5px;
+}
+.thing .thinngli{
+	width: 316px;
+	height: 366px;
+	margin: 0 0 34px 26px;
+	/*background: red;*/
+	float: left;
+	position: relative;
+}
+.thing .thinngli img{
+	width: 316px;
+	height: 316px;
+	
+}
+.thinngli p{
+	position: absolute;
+}
+.thing .thinngli:hover .li-yin{
+	display: block;
+}
+.li-yin{
+	width: 316px;
+	height: 316px;
+	position: absolute;
+	background: rgba(51,51,51,0.4);
+	
+	top: 0;
+	left: 0;
+	display: none;
+	border: none;
+}
+.li-yin h2{
+	font-style: italic;
+	font-weight: normal;
+	padding-left: 10px;
+	white-space: 2px;
+	margin-bottom: 80px;
+}
+.li-yin h1{
+	color: #F2F2F2;
+	font-weight: normal;
+	text-align: center;
+	font-size: 18px;
+}
+.li-yin p{
+	color: #F2F2F2;
+	font-weight: normal;
+	text-align: left;
+}
+
+.thing .first{
+	margin-left: 0;
+}
+
+
+/*more*/
+.more{
+	width: 100%;
+	height: 200px;
+	/*background: red;*/
+	overflow: hidden;
+}
+.more i{
+	display: block;
+	width: 160px;
+	height: 50px;
+	margin: 10px auto;
+	border: 5px solid #3C3C3C;
+	text-align: center;
+	line-height: 45px;
+	font-weight: bold;
+	font-size: 20px;
+	
+	
+}
+.more i a{
+	color: #3c3c3c;
+}
+.more i:hover a{
+	color: white;
+}
+.more i:hover{
+	background: #3C3C3C;
+}
+
+
+/*底部*/
+
+.cont{
+	width: 100%;
+	height: 250px;
+	background: #fbfdfe;
+	border: 1px #ededed solid;
+	text-align: center;
+}
+.cont01{
+	width: 1000px;
+	height: 190px;
+	margin: 60px auto 0;
+	
+}
+.cont01 h4{
+padding-bottom:30px ;
+	
+}
+.cont01 h4 a{
+	color: black;
+}
+.last{
+	width: 100%;
+	height: 210px;
+	background: black;
+	float: left;
+	font-size: 12px;
+	
+}
+.last-1{
+	width: 1000px;
+	height: 190px;
+	margin:20px auto 0;
+	color: white;
+}
+.ul{
+	margin-bottom: 10px;
+	height: 30px;
+}
+.ul li{
+	float: left;
+	padding: 0 5px;
+	opacity: 0.5;
+}
+.ul li a{
+	color: white;
+	opacity: 0.6;
+}
+.about{
+	margin-right:00px ;
+}
+.last-1 ul li{
+	opacity: 0.6;
+}
+.ul li a:hover{
+	opacity: 1;
+}
