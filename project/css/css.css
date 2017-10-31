@@ -16,7 +16,14 @@ body{
 	overflow-x: hidden;
 }
 /*头部*/
-
+.header-s{
+	position: fixed;
+	width: 100%;
+	height: 101px;
+	top:0;
+	left: 0;
+	z-index: 3;
+}
 .header{
 	height: 56px;
 	width: 100%;
@@ -116,6 +123,12 @@ body{
 	height: 45px;
 	width: 1000px;
 	border-bottom: 3px rgba(0,0,0,0.3) solid;
+	/*position: fixed;*/
+	background: #fff;
+	z-index: 3;
+	/*top: 56px;
+	left: 50%;*/
+	/*margin-left: -500px;*/
 	margin: 0 auto;
 }
 .sbv ul li{
@@ -404,4 +417,43 @@ padding-bottom:30px ;
 }
 .ul li a:hover{
 	opacity: 1;
+}
+
+/*back*/
+.back{
+	width: 59px;
+	height: 59px;
+	
+	position: fixed;
+	bottom: 40px;
+	right: 20px;
+	display: none;
+}
+.back a{
+	width: 59px;
+    height: 59px;
+    display: block;
+    background: url(../img/icon.png) no-repeat;
+    background-position: -20px -813px;
+}
+
+.back:hover a{
+	opacity: 0.4;
+}
+
+.lianxi{
+	background: #5b799a;
+	color: #F1F1F1;
+	position: fixed;
+	bottom: 18px;
+	right: 20px;
+	height: 20px;
+	width: 57px;
+	font-size: 12px;
+	text-align: right;
+	padding-right: 2px;
+	display: none;
+}
+.lianxi a{
+	color: white;
 }

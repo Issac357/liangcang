@@ -82,3 +82,36 @@ $.get(url,data,function(obj){
 	$(".thing ul").html(h)
 	
 })
+
+$(".back").click(function(){
+	$("body,html").animate({scrollTop:0})
+})
+
+$(document).scroll(function(){
+	var top = $(document).scrollTop()
+	if(top>100){
+		$(".back").fadeIn()
+		$(".lianxi").fadeIn()
+
+	}else{
+		$(".back").fadeOut()
+		$(".lianxi").fadeOut()
+
+	}
+	
+})
+
+$(document).mousewheel(function(e){
+	if($(".header-s").is(":animated")){
+		return
+	}
+	//var a = 
+	if(e.deltaY<0){
+		$(".header-s").animate({"top":-56},200)
+	}else{
+		$(".header-s").animate({"top":0},200)
+	}
+	console.log(e.deltaY)
+})
+
+
