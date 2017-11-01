@@ -1,0 +1,24 @@
+.j-main{
+	margin: 104px auto 0;
+	width: 1000px;
+	height: 2400px;
+	background: #fff;
+}
+.thing-j{
+	width: 1000px;
+	height: 2400px;
+}
+.thinngli-j{
+	width: 316px;
+	height: 380px;
+	margin-left:26px ;
+	margin-bottom: 20px;
+	float: left;
+}
+.first-j{
+	margin-left: 0;
+}
+.thinngli-j img{
+	width:316px;
+	height: 316px;
+}

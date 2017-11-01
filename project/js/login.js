@@ -79,6 +79,7 @@ $("#login").click(function(){
 				console.log(obj)
 				if(obj.code == 0){
 					alert("登录成功")
+					window.location.href = "index.html";
 				}else if (obj.code == 2002){
 					alert("用户名不存在")
 				}else if(obj.code == 1001){

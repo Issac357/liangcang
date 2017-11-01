@@ -1,8 +1,4 @@
-$(".cont h4 img").mouseover(function(){
-		$(this).animate({"right":50},1000,function(){
-			$(this).animate({"right":0},1000)
-		})
-	})
+
 var i = 0;
 function play(){
 	$(".lunbo ul li").eq(i).fadeIn().siblings().fadeOut()
@@ -83,35 +79,5 @@ $.get(url,data,function(obj){
 	
 })
 
-$(".back").click(function(){
-	$("body,html").animate({scrollTop:0})
-})
-
-$(document).scroll(function(){
-	var top = $(document).scrollTop()
-	if(top>100){
-		$(".back").fadeIn()
-		$(".lianxi").fadeIn()
-
-	}else{
-		$(".back").fadeOut()
-		$(".lianxi").fadeOut()
-
-	}
-	
-})
-
-$(document).mousewheel(function(e){
-	if($(".header-s").is(":animated")){
-		return
-	}
-	//var a = 
-	if(e.deltaY<0){
-		$(".header-s").animate({"top":-56},200)
-	}else{
-		$(".header-s").animate({"top":0},200)
-	}
-	console.log(e.deltaY)
-})
 
 
