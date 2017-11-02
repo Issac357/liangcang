@@ -101,7 +101,7 @@ $(document).ready(function() {
 	
 	if (p != undefined && u != undefined) {
 		$("#login-index").html(u); // 放到 input 中
-		$("#reg-index").html("注销")
+		//$("#reg-index").html("注销")
 		//$("#reg-index").attr("href","#")
 		// 放到 input 中
 		
