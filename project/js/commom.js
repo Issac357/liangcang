@@ -12,6 +12,10 @@ $(".back").click(function(){
 
 $(document).scroll(function(){
 	var top = $(document).scrollTop()
+	if(top==0){
+		$(".header-s").animate({"top":0},100)
+	}
+	
 	if(top>100){
 		$(".back").fadeIn()
 		$(".lianxi").fadeIn()

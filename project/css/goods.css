@@ -1,0 +1,61 @@
+.g-main{
+	width: 1000px;
+	height: 500px;
+	/*background: red;*/
+	margin: 110px auto 20px;
+}
+.thing-goods{
+	width: 400px;
+	height: 500px;
+	/*background: red;*/
+}
+.goods{
+	width: 400px;
+	height: 400px;
+}
+.goods-little{
+	width: 400px;
+	height: 80px;
+	margin: 20px 0 0;
+	/*background: blue;*/
+	position: relative;
+}
+
+.btn{
+	position: absolute;
+    cursor: pointer;
+    z-index: 99;
+    font-size: 50px;
+    font-weight: bold;
+    width: 10px;
+    height: 18px;
+    /*background: red;*/
+    
+    top:50%;
+    margin-top: -9px;
+}
+.goods-pre{
+	left: -20px;
+	background: url(../img/pre.png) no-repeat;
+    background-size: 10px 18px;
+}
+.goods-next{
+	right: -20px;
+	background: url(../img/next.png) no-repeat;
+    background-size: 10px 18px;
+}
+.small ul li{
+	float: left;
+
+}
+.small img{
+	width: 76px;
+	height: 76px;
+	border: 2px #fff solid; 
+}
+.small{
+	overflow: hidden;
+}
+.active img{
+	border: 2px #ff4400 solid;
+}
