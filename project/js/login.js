@@ -77,9 +77,12 @@ $("#login").click(function(){
 			}
 			$.post(url,data,function(obj){
 				console.log(obj)
+				var token = obj.data.token
 				if(obj.code == 0){
 					alert("登录成功")
-					window.location.href = "index.html";
+					$.cookie("token",token)
+					window.location.href = "index.html?token="+token;
+					
 				}else if (obj.code == 2002){
 					alert("用户名不存在")
 				}else if(obj.code == 1001){

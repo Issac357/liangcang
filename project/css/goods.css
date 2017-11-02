@@ -59,3 +59,28 @@
 .active img{
 	border: 2px #ff4400 solid;
 }
+.s-things{
+	float: right;
+	width: 400px;
+	height: auto;
+	/*background: red;*/
+	position: relative;
+	margin-left: 10px;
+}
+.s-things img{
+	width: 200px;
+	height: 200px;
+	border: none;
+	float: left;
+}
+.btn-div{
+	float: right;
+	
+}
+.btn-shop{
+	/*position: absolute;
+	bottom: -20px;
+	left: 50%;*/
+	width: 100px;
+	height: 50px;
+}

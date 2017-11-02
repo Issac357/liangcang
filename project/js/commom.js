@@ -42,17 +42,43 @@ $(document).mousewheel(function(e){
 })
 
 var searchA = 0
+$(".search-in").focus(function(){
+	$(this).keydown(function(e){
+		if(e.keyCode==13){
+			var txt = $(".search-in").val()
+			location.href="search.html?search="+txt
+			return
+		}
+	})
+})
+
+
+$(".search-in").click(function(e){
+	e.stopPropagation()
+	
+})
 $(".search-a").click(function(e){
 	e.stopPropagation()
+	
+	if( $(".search-in").val() !=""){
+		var txt = $(".search-in").val()
+		location.href="search.html?search="+txt
+		return
+	}
+	
 	if(searchA == 0){
 		$(".search-div").animate({"left":0},500,function(){
 			searchA = 1
+			
 		})
 	}else{
 		$(".search-div").animate({"left":260},500,function(){
 			searchA = 0
 		})
 	}
+	
+	
+	
 })
 $(document).click(function(){
 	if(searchA == 1){
@@ -75,10 +101,21 @@ $(document).ready(function() {
 	
 	if (p != undefined && u != undefined) {
 		$("#login-index").html(u); // 放到 input 中
-		$("#reg-index").html("注销") // 放到 input 中
+		$("#reg-index").html("注销")
+		//$("#reg-index").attr("href","#")
+		// 放到 input 中
 		
 		
 		// 再发  ajax 向服务器发送登陆请求
 		
 	}
 })
+
+
+
+
+
+//$(".search-a").click(function(){
+//	var txt = $(".search-in").val()
+//	location.href="search.html?search="+txt
+//})

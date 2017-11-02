@@ -25,11 +25,33 @@ console.log(arr[1])
 	var data ={"goods_id":arr[1]}
 	
 	$.get(url,data,function(obj){
-		console.log(obj)
+		console.log(obj.data)
+		var arr = obj.data
+		var h = "" 
+		
+		for (var i =0; i<arr.length;i++) {
+			
+				h+='<img src="'+arr[i].goods_thumb+'"/>'
+				
+			
+			//h+=arr[i].goods_thumb
+		}
+		console.log(h)
+		
+		$(".s-things").html(h)
 	})
+
+
+
+
 
 var i =0
 
+
+
+
+	var n =0
+	var m =0
 var len=$(".small ul li").length
 var ulwidth=len*80
 $(".small ul").css("width",ulwidth+"px")
@@ -44,8 +66,7 @@ $('.small ul li').each(function(index){
 })
 	
 	
-	var n =0
-	var m =0
+	
 	$('.goods-next').click(function(){
 		
 		if($('.small ul').is(":animated")){
@@ -85,3 +106,42 @@ $('.small ul li').each(function(index){
 		var imgsrc = $('.small ul li').eq(m).children('img').attr('src')
 		$('.big img').attr('src',imgsrc)
 	})
+		
+
+$(".btn-shop").click(function(){
+	if($.cookie("token")==undefined){
+		alert("请重新登录")
+		location.href="login.html"
+		return
+	}else{
+		var token = $.cookie("token")
+		console.log(token)
+		var headers = {
+		"token": token
+		}
+		var url = "http://h6.duchengjiu.top/shop/api_cart.php";
+		
+		var data = {
+		goods_id:parseInt(arr[1]),  
+		number:1
+		}
+		console.log(data.goods_id)
+		$.post(url,function(str){
+			console.log(str)
+		})
+		
+	$.ajax({
+		type: "post",
+		url: url,
+		data: data,
+		headers: headers,
+		success: function( str) {
+			console.log(str);
+		},
+		async:true
+	});
+
+
+
+	}
+})

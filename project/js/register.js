@@ -157,7 +157,14 @@ $("#login").click(function(){
 								alert("用户名已存在")
 								return
 							}else{
-								alert("注册成功")
+								alert("注册成功")	
+								$.cookie("u","")
+								$.cookie("p","")
+								$.cookie("u", a1, {expires: 7});
+								$.cookie("p", a2, {expires: 7});
+								window.location.href="index.html"
+							
+								
 							}
 						})
 					}else{

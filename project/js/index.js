@@ -1,4 +1,14 @@
 
+
+console.log(location.search)
+var str = location.search
+str = str.slice(1)
+var arr = str.split("=")
+console.log(arr[1])
+
+//$.cookie("token",arr[1])
+
+
 var i = 0;
 function play(){
 	$(".lunbo ul li").eq(i).fadeIn().siblings().fadeOut()
@@ -59,9 +69,9 @@ $.get(url,data,function(obj){
 	var h =""
 	for(var j=0;j<arr.length;j++){
 		if (j%3 == 0) {
-			h+= '<li class="first thinngli"><img src="'
+			h+= '<li class="first thinngli"><a href="goods.html?goods_id='+arr[j].goods_id+'"><img src="'
 		} else{
-			h+= '<li class="thinngli"><img src="'
+			h+= '<li class="thinngli"><a href="goods.html?goods_id='+arr[j].goods_id+'"><img src="'
 		}
 		
 		h+=arr[j].goods_thumb
