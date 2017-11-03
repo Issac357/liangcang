@@ -9,7 +9,6 @@ var data = {
 	search_text:txt,
 	page:1,
 	pagesize:18
-	
 }
 $.get(url,data,function(obj){
 	console.log(obj)
